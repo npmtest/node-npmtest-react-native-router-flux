@@ -1,1 +1,40 @@
-{     "devDependencies": {         "react-native-router-flux": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-react-native-router-flux",     "homepage": "https://github.com/npmtest/node-npmtest-react-native-router-flux",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-react-native-router-flux.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### test coverage for  [react-native-router-flux (v3.38.0)](https://github.com/aksonov/react-native-router-flux#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-react-native-router-flux.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-react-native-router-flux) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-react-native-router-flux.svg)](https://travis-ci.org/npmtest/node-npmtest-react-native-router-flux)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "react-native-router-flux": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-react-native-router-flux",
+    "keywords": [
+        "coverage",
+        "test",
+        "react-native-router-flux"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_react_native_router_flux.js",
+    "name": "npmtest-react-native-router-flux",
+    "nameAlias": "npmtest_react_native_router_flux",
+    "nameOriginal": "npmtest-react-native-router-flux",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-react-native-router-flux.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
